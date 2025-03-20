@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo_padrao.svg" type="image/x-icon">
     <title>Quibble</title>
     <link rel="stylesheet" href="assets/feed.css">
 </head>
@@ -12,31 +13,35 @@
     </header>
     <aside>
         <h1>Quibble</h1>
-        <nav>
-            <ul>
-                <li><a href="feed.html">Feed</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="notificacoes.html">Notificações</a></li>
-                <li><a href="comunidade.html">Comunidade</a></li>
-                <li><a href="mapa.html">Mapa de Problemas</a></li>
-                <li><a href="prefeitos.html">Prefeitos</a></li>
-            </ul>
-        </nav>
-        <button>Nova Reclamação</button>
-        <div class="linha"></div>
-        <div>
-            <ul>
-                <li><a href="#">Tema</a></li>
-                <li><a href="ajuda.html">Ajuda</a></li>
-                <li><a href="config.html">Configurações</a></li>
-            </ul>
-            <div id="perfil-area">
-                <figure>
-                    <img src="img/perfil.png" alt="">
-                </figure>
-                <div>
-                    <h2>Bernardo Cota</h2>
-                    <p>RJ - Rio de Janeiro</p>
+        <div class="aside-content">
+            <nav>
+                <ul>
+                    <li><a href="feed.html"><img src="assets/images/home.svg" alt=""> <div>Feed</div></a></li>
+                    <li><a href="perfil.html"><img src="assets/images/perfil.svg" alt=""> <div>Perfil</div></a></li>
+                    <li><a href="notificacoes.html"><img src="assets/images/sino.svg" alt=""> <div>Notificações</div></a></li>
+                    <li><a href="comunidade.html"><img src="assets/images/comunidade.svg" alt=""> <div>Comunidade</div></a></li>
+                    <li><a href="mapa.html"> <img src="assets/images/ponteiro.svg" alt=""> <div>Mapa de Problemas</div></a></li>
+                    <li><a href="prefeitos.html"><img src="assets/images/tribunal.svg" alt=""> <div>Prefeitos</div></a></li>
+                </ul>
+            </nav>
+            <button>Nova Reclamação</button>
+            <div class="linha-area"><div class="linha"></div></div>
+            <div id="nav-secundario">
+                <ul>
+                    <li><a href="#"><img src="assets/images/lua.svg" alt=""> <div>Tema</div></a></li>
+                    <li><a href="ajuda.html"><img src="assets/images/ajuda.svg" alt=""> <div>Ajuda</div></a></li>
+                    <li><a href="config.html"><img src="assets/images/config.svg" alt=""> <div>Configurações</div></a></li>
+                </ul>
+                <div id="perfil-area">
+                    <a href="perfil.html">
+                        <figure id="perfil-area-img">
+                            <img src="assets/images/bernardo.png" alt="">
+                        </figure>
+                        <div id="perfil-area-info">
+                            <h2>Bernardo Cota</h2>
+                            <p>RJ - Rio de Janeiro</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
