@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* AZUL */
+    --azul-primario: #2B72DF;
+    --azul-primario-escuro: #0F3876;
+    --azul-primario-claro: #97BCF6;
+    --azul-primario-claromais: #D1E2FC;
+
+    /* AMARELO */
+    --amarelo-secundario: #DEA22A;
+    --amarelo-sec-dark: #75530F;
+    --amarelo-sec-light: #F5D696;
+    --amarelo: #FFCE52;
+    --amarelo-claro: #FFD76B;
+    --amarelo-escuro: #D9B043;
+    --amarelo-sec-lightmais: #FCEED1;
+
+    /* BRANCO */
+    --branco: #EFF1F3;
+    --branco-claro: #FAFEFC;
+    --branco-escuro: #ACADBB;
+
+    /* CINZA */
+    --cinza-1: #3A3A3A;
+    --cinza-2: #4A4A4A;
+    --cinza-3: #5A5A5A;
+    --cinza-4: #6A6A6A;
+    --cinza-5: #7A7A7A;
+    --cinza-6: #8A8A8A;
+    --cinza-7: #9A9A9A;
+
+    /* PRETO */
+    --preto: #161A1E;
+    --preto-claro: #353A3C;
+    --preto-escuro: #0C0B0F;
+
+    /* VERMELHO */
+    --vermelho: #EB3D3D;
+    --vermelho-claro: #F05454;
+    --vermelho-escuro: #D03333;
+
+    /* VERDE */
+    --verde: #32D957;
+    --verde-claro: #50E170;
+    --verde-escuro: #28BB49;
+
+    /* FONTE */
+    --fonte-texto: 'Mukta Mahee', sans-serif;
+    --fonte-titulo: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--fonte-texto);
+}
+
+aside {
+    width: 15%;
+    height: 100vh;
+    background-color: var(--azul-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+aside h1 {
+    color: var(--branco);
+    font-size: 32px;
+    padding: 20px 0 0 20px;
+
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+}
+
