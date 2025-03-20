@@ -201,6 +201,8 @@ header {
     top: 0;
     right: 0;
 
+    z-index: 999;
+
     width: 85%;
 
     padding: 16px;
@@ -522,7 +524,7 @@ main {
 }
 
 .feed-card .feed-card-content{
-    z-index: 999;
+    z-index: 800;
     margin-top: -100px;
     
     background-color: var(--azul-primario-claromais);
