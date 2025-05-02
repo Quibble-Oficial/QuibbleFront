@@ -589,3 +589,306 @@ main {
 .feed-card .feed-card-content-feedback .feedback-share img {
     margin-right: 8px;
 }
+
+.header-content.mobile,
+#filter-line-mobile,
+.feed-card .feed-card-content-feedback.mobile,
+#filter-mobile,
+footer {
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (orientation: portrait) {
+    #sugestoes {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    /* HEADER RESPONSIVIDADE */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        position: fixed;
+        top: 0;
+        right: 0;
+    
+        z-index: 999;
+    
+        width: 100%;
+    
+        padding: 16px;
+        padding-bottom: 0px;
+    
+        background-color: var(--branco-claro);
+
+        border-bottom: 0px;
+    }
+    
+    .header-content {
+        display: none;
+    }
+
+    .header-content.mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .header-content.mobile #perfil-mobile {
+        width: 48px;
+        height: 48px;
+    }
+
+    .header-content.mobile #logo-mobile {
+        width: 48px;
+        height: 48px;
+    }
+
+    #header-buttons-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #pesquisa-mobile img{
+        color: var(--azul-primario-escuro);
+        margin-right: 16px;
+    }
+
+    #filter-mobile {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 16px;
+    }
+    
+    #filter-mobile .filter-item-mobile {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: var(--fonte-titulo);
+    
+        color: var(--azul-primario);
+    
+        margin-right: 32px;
+    }
+
+    #filter-mobile .filter-item-mobile:last-child {
+        margin-right: 0px;
+    }
+    
+    #filter-mobile .filter-item-mobile.active {
+        font-weight: 700;
+        border-bottom: 2px solid var(--amarelo-secundario);
+    }
+
+    #filter-line-mobile {
+        display: block;
+        width: 80%;
+        height: 1px;
+        background-color: var(--azul-primario-claromais);
+        margin-top: -1px;
+
+        z-index: -2;
+    }
+
+    /* FEED RESPONSIVIDADE */
+
+    #feed {
+        width: 80%;
+    }
+
+    #feed-content {
+        margin-top: 80px;
+    }
+
+    #feed #feed-filter {
+        display: none;
+    }
+
+    .feed-card {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: center;
+    
+        margin-top: 32px;
+    }
+
+    .feed-card:first-child {
+        margin-top: 0px;
+    }
+    
+    .feed-card > img {
+        width: 80%;
+
+        border-radius: 8px;
+    }
+    
+    .feed-card .feed-card-content{
+        background-color: transparent;
+    
+        border-radius: 20px;
+        
+        margin-top: 0px;
+
+        padding: 18px;
+        padding-right: 0px;
+    }
+    
+    .feed-card .feed-card-content-text {
+        display: flex;
+    }
+    
+    .feed-card .feed-card-content-text img {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .feed-card .feed-card-content-text .feed-card-content-text-area {
+        margin-left: 16px;
+    }
+    
+    .feed-card .feed-card-content-text .feed-card-content-text-area h5{
+        font-size: 16px;
+        font-weight: 700;
+    
+        color: var(--azul-primario-escuro);
+    }
+    
+    .feed-card .feed-card-content-text .feed-card-content-text-area p {
+        font-size: 14px;
+        font-weight: 400;
+    
+        color: var(--preto);
+    }
+    
+    .feed-card .feed-card-content-feedback {
+        display: none;
+    }
+
+    .feed-card .feed-card-content-feedback.mobile {
+        display: flex;
+        align-items: flex-end;
+    
+        margin-top: 16px;
+    }
+
+    .feed-card .feed-card-content-feedback .feedback-upvote,
+    .feed-card .feed-card-content-feedback .feedback-comment,
+    .feed-card .feed-card-content-feedback .feedback-share {
+        display: flex;
+        align-items: center;
+    
+        padding: 4px 16px;
+        background-color: var(--azul-primario-claro);
+    
+        border-radius: 10px;
+    
+        cursor: pointer;
+    
+        margin-left: 16px;
+
+        font-size: 12px;
+    }
+
+    .feed-card .feed-card-content-feedback .feedback-upvote {
+        margin-left: 0px;
+
+        text-wrap: nowrap;
+    }
+    
+    .feed-card .feed-card-content-feedback .feedback-upvote img,
+    .feed-card .feed-card-content-feedback .feedback-comment img,
+    .feed-card .feed-card-content-feedback .feedback-share img {
+        margin-right: 8px;
+    }
+
+    /* FOOTER RESPONSIVIDADE */
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+
+        z-index: 999;
+
+        width: 100%;
+
+        background-color: var(--branco-claro);
+        border-top: 1px solid var(--azul-primario-claromais);
+
+        padding: 16px;
+    }
+
+    footer a {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .feed-card > img {
+        width: 86%;
+    }
+
+    .feed-card .feed-card-content {
+        margin-top: 0px;
+    }
+
+    .feed-card .feed-card-content-text {
+        padding: 0;
+    }
+
+    .feed-card .feed-card-content-text img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .feed-card .feed-card-content-text .feed-card-content-text-area h5{
+        font-size: 16px;
+    }
+    
+    .feed-card .feed-card-content-text .feed-card-content-text-area p {
+        font-size: 14px;
+    }
+
+    .feed-card .feed-card-content-feedback {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+
+    .feed-card .feed-card-content-feedback .feedback-upvote {
+        margin-left: 0px;
+
+        text-wrap: nowrap;
+    }
+
+    .feed-card .feed-card-content-feedback .feedback-upvote,
+    .feed-card .feed-card-content-feedback .feedback-comment,
+    .feed-card .feed-card-content-feedback .feedback-share {
+        font-size: 12px;
+        padding: 4px 16px;
+    }
+
+    .feed-card .feed-card-content-feedback .feedback-upvote img,
+    .feed-card .feed-card-content-feedback .feedback-comment img,
+    .feed-card .feed-card-content-feedback .feedback-share img {
+        width: 16px;
+        height: 16px
+    }
+}
