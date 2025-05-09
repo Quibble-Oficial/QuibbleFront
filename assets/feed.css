@@ -67,6 +67,8 @@ body {
     align-items: center;
 }
 
+/* BARRA LATERAL (AREA DA ESQUERDA) */
+
 aside {
     width: 15%;
     height: 100vh;
@@ -192,6 +194,8 @@ aside button {
     font-weight: 500;
 }
 
+/* HEADER TOPO */
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -309,6 +313,8 @@ header {
 
     background-color: var(--amarelo);
 }
+
+/* SUGESTOES AREA DA DIREITA */
 
 #sugestoes {
     display: flex;
@@ -473,6 +479,8 @@ header {
     padding: 6px 14px;
 }
 
+/* MEIO PRINCIPAL */
+
 main {
     display: flex;
     flex-direction: column;
@@ -500,6 +508,8 @@ main {
     color: var(--azul-primario);
 
     margin-right: 32px;
+
+    cursor: pointer;
 }
 
 #feed #feed-filter .feed-filter-item.active {
@@ -590,6 +600,8 @@ main {
     margin-right: 8px;
 }
 
+/* PARA A RESPONSIVIDADE */
+
 .header-content.mobile,
 #filter-line-mobile,
 .feed-card .feed-card-content-feedback.mobile,
@@ -645,14 +657,12 @@ footer {
         margin-right: 0px;
     }
 
-    .header-content.mobile #perfil-mobile {
-        width: 48px;
-        height: 48px;
-    }
-
+    .header-content.mobile #perfil-mobile,
     .header-content.mobile #logo-mobile {
         width: 48px;
         height: 48px;
+
+        cursor: pointer;
     }
 
     #header-buttons-mobile {
@@ -663,6 +673,12 @@ footer {
     #pesquisa-mobile img{
         color: var(--azul-primario-escuro);
         margin-right: 16px;
+
+        cursor: pointer;
+    }
+
+    #notificacoes-mobile img {
+        cursor: pointer;
     }
 
     #filter-mobile {
@@ -680,6 +696,7 @@ footer {
         color: var(--azul-primario);
     
         margin-right: 32px;
+        cursor: pointer;
     }
 
     #filter-mobile .filter-item-mobile:last-child {
@@ -722,6 +739,10 @@ footer {
         justify-content: center;
     
         margin-top: 32px;
+    }
+
+    .feed-card:last-child {
+        margin-bottom: 64px;
     }
 
     .feed-card:first-child {
@@ -839,6 +860,8 @@ footer {
         align-items: center
     }
 }
+
+/* AJEITANDO RESPONSIVIDADE PARA CELULAR */
 
 @media screen and (max-width: 600px) {
     .feed-card > img {

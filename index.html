@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/feed.css">
 </head>
 <body>
+
+    <!-- BARRA LATERAL (ESQUERDA) -->
+
     <aside>
         <h1>Quibble</h1>
         <div class="aside-content">
@@ -44,6 +47,8 @@
         </div>
     </aside>
 
+    <!-- HEADER -->
+
     <header>
         <div class="header-content">
             <div id="pesquisa">
@@ -61,6 +66,7 @@
                 </div>
             </div>
         </div>
+        <!-- ESSE HEADER SÓ APARECE NO MOBILE -->
         <div class="header-content mobile">
             <img src="assets/images/bernardo.png" alt="" id="perfil-mobile">
             <img src="assets/images/logo_padrao.svg" alt="" id="logo-mobile">
@@ -73,6 +79,7 @@
                 </div>
             </div>
         </div>
+        <!-- ESSE FILTER SÓ APARECE NO MOBILE -->
         <div id="filter-mobile">
             <div class="filter-item-mobile">Defesa Civil</div>
             <div class="filter-item-mobile active">Infraestrutura</div>
@@ -80,6 +87,8 @@
         </div>
         <div id=filter-line-mobile></div>
     </header>
+
+    <!-- SUGESTÕES (DIREITA) -->
 
     <div id="sugestoes">
         <div id="sugestoes-content">
@@ -154,9 +163,11 @@
         </div>
     </div>
     
+    <!-- CONTEÚDO DO MEIO PRINCIPAL -->
     <main>
         <div id="feed">
-            <div id="feed-filter">
+            <!-- ESSE FILTER SOME NO MOBILE -->
+            <div id="feed-filter"> 
                 <div class="feed-filter-item">Mobilidade</div>
                 <div class="feed-filter-item">Educação</div>
                 <div class="feed-filter-item">Saúde</div>
@@ -290,13 +301,15 @@
         </div>
     </main>
 
+    <!-- FOOTER (SÓ APARECE NO MOBILE)-->
+
     <footer>
-        <a href="#"><img src="assets/images/home_mobile.svg" alt=""></a>
-        <a href="#"><img src="assets/images/perfil_mobile.svg" alt=""></a>
-        <a href="#"><img src="assets/images/sino_mobile.svg" alt=""></a>
-        <a href="#"><img src="assets/images/comunidade_mobile.svg" alt=""></a>
-        <a href="#"><img src="assets/images/ponteiro_mobile.svg" alt=""></a>
-        <a href="#"><img src="assets/images/tribunal_mobile.svg" alt=""></a>
+        <a href="index.html"><img src="assets/images/home_mobile.svg" alt=""></a>
+        <a href="perfil.html"><img src="assets/images/perfil_mobile.svg" alt=""></a>
+        <a href="notificacoes.html"><img src="assets/images/sino_mobile.svg" alt=""></a>
+        <a href="comunidade.html"><img src="assets/images/comunidade_mobile.svg" alt=""></a>
+        <a href="mapa.html"><img src="assets/images/ponteiro_mobile.svg" alt=""></a>
+        <a href="prefeitos.html"><img src="assets/images/tribunal_mobile.svg" alt=""></a>
     </footer>
 </body>
 </html>
