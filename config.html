@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo_padrao.svg" type="image/x-icon">
+    <title>Configurações - Quibble</title>
+    <link rel="stylesheet" href="assets/config.css">
+    <link rel="stylesheet" href="assets/js/animacoes.css">
+    <!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+<div id="bg-animado"></div>
+
+    <!-- ANIMAÇÃO DE ENTRADA -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        anime({
+          targets: 'aside h1',
+          translateY: [-100, 0],
+          opacity: [0, 1],
+          easing: 'easeOutElastic(1, .8)',
+          duration: 1800
+        });
+        anime({
+          targets: '.aside-content nav ul li',
+          translateX: [-60, 0],
+          opacity: [0, 1],
+          delay: anime.stagger(120, {start: 600}),
+          easing: 'easeOutExpo',
+          duration: 1200
+        });
+        anime({
+          targets: '.config-section',
+          scale: [0.95, 1],
+          opacity: [0, 1],
+          delay: anime.stagger(150, {start: 1000}),
+          easing: 'easeOutBack',
+          duration: 800
+        });
+        // BG animado
+        anime({
+          targets: '#bg-animado',
+          opacity: [0, 0.18],
+          duration: 2000,
+          easing: 'easeInOutQuad'
+        });
+      });
+    </script>
+
+    <aside>
+        <h1>Quibble</h1>
+        <div class="aside-content">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="assets/images/home.svg" alt=""> <div>Feed</div></a></li>
+                    <li><a href="perfil.html"><img src="assets/images/perfil.svg" alt=""> <div>Perfil</div></a></li>
+                    <li><a href="notificacoes.html"><img src="assets/images/sino.svg" alt=""> <div>Notificações</div></a></li>
+                    <li><a href="comunidade.html"><img src="assets/images/comunidade.svg" alt=""> <div>Comunidade</div></a></li>
+                    <li><a href="mapa.html"> <img src="assets/images/ponteiro.svg" alt=""> <div>Mapa de Problemas</div></a></li>
+                    <li><a href="prefeitos.html"><img src="assets/images/tribunal.svg" alt=""> <div>Prefeitos</div></a></li>
+                </ul>
+            </nav>
+            <button id="btn-nova-reclamacao">Nova Reclamação</button>
+            <div class="linha-area"><div class="linha"></div></div>
+            <div id="nav-secundario">
+                <ul>
+                    <li><a href="#"><img src="assets/images/lua.svg" alt=""> <div>Tema</div></a></li>
+                    <li><a href="ajuda.html"><img src="assets/images/ajuda.svg" alt=""> <div>Ajuda</div></a></li>
+                    <li><a href="configuracoes.html" class="active"><img src="assets/images/config.svg" alt=""> <div>Configurações</div></a></li>
+                </ul>
+                <div id="perfil-area">
+                    <a href="perfil.html">
+                        <figure id="perfil-area-img">
+                            <img src="assets/images/bernardo.png" alt="">
+                        </figure>
+                        <div id="perfil-area-info">
+                            <h2>Bernardo Cota</h2>
+                            <p>RJ - Rio de Janeiro</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div id="pesquisa">
+                <img src="assets/images/pesquisa.svg" alt="">
+                <div class="linha-vertical"></div>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+            <div id="header-buttons">
+                <div id="notificacoes">
+                    <img src="assets/images/sino_vazio.svg" alt="">
+                    <div id="notificacoes-qtd"></div>
+                </div>
+                <div id="config">
+                    <img src="assets/images/config.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- ESSE HEADER SÓ APARECE NO MOBILE -->
+        <div class="header-content mobile">
+            <img src="assets/images/bernardo.png" alt="" id="perfil-mobile">
+            <img src="assets/images/logo_padrao.svg" alt="" id="logo-mobile">
+            <div id="header-buttons-mobile">
+                <div id="pesquisa-mobile">
+                    <img src="assets/images/pesquisa_mobile.svg" alt="">
+                </div>
+                <div id="notificacoes-mobile">
+                    <img src="assets/images/chat.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <div id="configuracoes-container">
+            <div class="config-header">
+                <h1>Configurações</h1>
+                <p>Gerencie suas preferências e configurações da conta</p>
+            </div>
+
+            <!-- SEÇÃO CONTA -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Conta e Perfil</h2>
+                    <p>Informações pessoais e configurações da conta</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Informações Pessoais</h3>
+                            <p>Nome, email, telefone e localização</p>
+                        </div>
+                        <button class="config-btn">Editar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Alterar Senha</h3>
+                            <p>Atualize sua senha para manter a conta segura</p>
+                        </div>
+                        <button class="config-btn">Alterar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Verificação em Duas Etapas</h3>
+                            <p>Adicione uma camada extra de segurança</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Perfil Público</h3>
+                            <p>Torne seu perfil visível para outros usuários</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO PRIVACIDADE -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Privacidade e Segurança</h2>
+                    <p>Controle quem pode ver suas informações e interagir com você</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Reclamações Privadas</h3>
+                            <p>Apenas você pode ver suas reclamações</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Localização Precisa</h3>
+                            <p>Compartilhar localização exata nas reclamações</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Mensagens Diretas</h3>
+                            <p>Permitir que outros usuários enviem mensagens</p>
+                        </div>
+                        <select class="config-select">
+                            <option value="todos">Todos</option>
+                            <option value="seguindo">Apenas quem eu sigo</option>
+                            <option value="ninguem">Ninguém</option>
+                        </select>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Dados de Uso</h3>
+                            <p>Compartilhar dados para melhorar o serviço</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO NOTIFICAÇÕES -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Notificações</h2>
+                    <p>Escolha como e quando receber notificações</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Notificações Push</h3>
+                            <p>Receber notificações no navegador</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Notificações por Email</h3>
+                            <p>Receber resumos e atualizações por email</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Novas Reclamações na Região</h3>
+                            <p>Ser notificado sobre problemas próximos</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Respostas dos Prefeitos</h3>
+                            <p>Notificações quando prefeitos respondem</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Comentários e Curtidas</h3>
+                            <p>Interações em suas reclamações</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO APARÊNCIA -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Aparência e Acessibilidade</h2>
+                    <p>Personalize a interface de acordo com suas preferências</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Tema</h3>
+                            <p>Escolha entre tema claro ou escuro</p>
+                        </div>
+                        <select class="config-select">
+                            <option value="claro">Claro</option>
+                            <option value="escuro">Escuro</option>
+                            <option value="automatico">Automático</option>
+                        </select>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Tamanho da Fonte</h3>
+                            <p>Ajuste o tamanho do texto</p>
+                        </div>
+                        <select class="config-select">
+                            <option value="pequeno">Pequeno</option>
+                            <option value="medio" selected>Médio</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Animações</h3>
+                            <p>Reduzir animações para melhor performance</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Alto Contraste</h3>
+                            <p>Melhorar visibilidade para usuários com deficiência visual</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO COMUNIDADE -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Comunidade e Interações</h2>
+                    <p>Configure como você interage com outros usuários</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Sugestões de Amigos</h3>
+                            <p>Mostrar sugestões baseadas em localização</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Filtro de Conteúdo</h3>
+                            <p>Ocultar conteúdo sensível automaticamente</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Compartilhamento Automático</h3>
+                            <p>Compartilhar reclamações em redes sociais</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Ranking de Participação</h3>
+                            <p>Aparecer nos rankings de usuários mais ativos</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO DADOS -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Dados e Armazenamento</h2>
+                    <p>Gerencie seus dados e histórico na plataforma</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Baixar Meus Dados</h3>
+                            <p>Faça download de todas as suas informações</p>
+                        </div>
+                        <button class="config-btn">Baixar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Limpar Cache</h3>
+                            <p>Remover dados temporários para liberar espaço</p>
+                        </div>
+                        <button class="config-btn">Limpar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Histórico de Atividades</h3>
+                            <p>Ver e gerenciar seu histórico de ações</p>
+                        </div>
+                        <button class="config-btn">Ver Histórico</button>
+                    </div>
+                    <div class="config-option danger">
+                        <div class="config-option-info">
+                            <h3>Excluir Conta</h3>
+                            <p>Remover permanentemente sua conta e dados</p>
+                        </div>
+                        <button class="config-btn danger">Excluir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO SUPORTE -->
+            <div class="config-section">
+                <div class="config-section-header">
+                    <h2>Suporte e Ajuda</h2>
+                    <p>Obtenha ajuda e entre em contato conosco</p>
+                </div>
+                <div class="config-options">
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Central de Ajuda</h3>
+                            <p>Perguntas frequentes e tutoriais</p>
+                        </div>
+                        <button class="config-btn">Acessar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Reportar Problema</h3>
+                            <p>Informe bugs ou problemas técnicos</p>
+                        </div>
+                        <button class="config-btn">Reportar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Contato</h3>
+                            <p>Entre em contato com nossa equipe</p>
+                        </div>
+                        <button class="config-btn">Contatar</button>
+                    </div>
+                    <div class="config-option">
+                        <div class="config-option-info">
+                            <h3>Sobre o Quibble</h3>
+                            <p>Versão 2.1.0 - Termos de uso e privacidade</p>
+                        </div>
+                        <button class="config-btn">Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER MOBILE -->
+    <div id="footer-mobile">
+        <a href="index.html">
+            <img src="assets/images/home_mobile.svg" alt="">
+        </a>
+        <a href="pesquisa.html">
+            <img src="assets/images/pesquisa_mobile.svg" alt="">
+        </a>
+        <a href="comunidade.html">
+            <img src="assets/images/comunidade_mobile.svg" alt="">
+        </a>
+        <a href="mapa.html">
+            <img src="assets/images/ponteiro_mobile.svg" alt="">
+        </a>
+        <a href="perfil.html">
+            <img src="assets/images/perfil_mobile_selecionado.svg" alt="">
+        </a>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Funcionalidade dos toggles
+        document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                // Aqui você pode adicionar lógica para salvar as configurações
+                console.log('Configuração alterada:', this.closest('.config-option').querySelector('h3').textContent, this.checked);
+            });
+        });
+
+        // Funcionalidade dos selects
+        document.querySelectorAll('.config-select').forEach(select => {
+            select.addEventListener('change', function() {
+                // Aqui você pode adicionar lógica para salvar as configurações
+                console.log('Configuração alterada:', this.closest('.config-option').querySelector('h3').textContent, this.value);
+            });
+        });
+
+        // Funcionalidade dos botões
+        document.querySelectorAll('.config-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const optionTitle = this.closest('.config-option').querySelector('h3').textContent;
+                
+                if (this.classList.contains('danger')) {
+                    if (confirm('Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.')) {
+                        alert('Funcionalidade de exclusão de conta seria implementada aqui.');
+                    }
+                } else {
+                    alert(`Funcionalidade "${optionTitle}" seria implementada aqui.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
